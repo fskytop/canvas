@@ -36,13 +36,13 @@ class App extends React.Component {
 
   componentDidMount() {
     const host = process.env.REACT_APP_CONTENT_HOST;
-    fetch(`${host}/resource/restaurants.json`)
+    fetch(`${host}/source/1.json`)
       .then((result) => result.json())
-      .then((restaurants) => {
+      .then((comics) => {
         this.setState({
-          restaurants: restaurants.map((restaurant) => ({
-            ...restaurant,
-            imageSrc: `${host}${restaurant.imageSrc}`,
+          restaurants: comics.map((comic) => ({
+            ...comic,
+            imageSrc: `${host}sky/1/images/${comic.image.split("/").pop()}`,
           })),
           loading: false,
         });

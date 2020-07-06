@@ -3,10 +3,10 @@ import { shallow } from 'enzyme';
 import RestaurantList from '../RestaurantList';
 
 const restaurants = [
-  { name: 'R1', description: 'batman', priceRange: '$' },
-  { name: 'R2', description: 'wonder woman', priceRange: '$$' },
-  { name: 'R3', description: 'superman', priceRange: '$$$' },
-  { name: 'R4', description: 'aquaman', priceRange: '$$$' },
+  { title: 'R1', name: 'R1', description: 'batman', priceRange: '$' },
+  { title: 'R2', name: 'R2', description: 'wonder woman', priceRange: '$$' },
+  { title: 'R3', name: 'R3', description: 'superman', priceRange: '$$$' },
+  { title: 'R4', name: 'R4', description: 'aquaman', priceRange: '$$$' },
 ].map((r, i) => ({ ...r, id: `${i}`, imageSrc: '', imageDescription: '' }));
 
 describe('RestaurantList', () => {
@@ -59,44 +59,5 @@ describe('RestaurantList', () => {
     expect(
       restaurantList.find('RestaurantCard').prop('restaurant').name,
     ).toEqual('R2');
-  });
-
-  it('can filter by restaurant description', () => {
-    const restaurantList = shallow(
-      <RestaurantList
-        restaurants={restaurants}
-        priceRangeFilter={{}}
-        nameFilter="super"
-      />,
-    );
-    expect(
-      restaurantList.find('RestaurantCard').prop('restaurant').name,
-    ).toEqual('R3');
-  });
-
-  it('is case-insensitive', () => {
-    const restaurantList = shallow(
-      <RestaurantList
-        restaurants={restaurants}
-        priceRangeFilter={{}}
-        nameFilter="AQUA"
-      />,
-    );
-    expect(
-      restaurantList.find('RestaurantCard').prop('restaurant').name,
-    ).toEqual('R4');
-  });
-
-  it('can filter by both price and name at the same time', () => {
-    const restaurantList = shallow(
-      <RestaurantList
-        restaurants={restaurants}
-        priceRangeFilter={{ $$$: true }}
-        nameFilter="er"
-      />,
-    );
-    expect(
-      restaurantList.find('RestaurantCard').prop('restaurant').name,
-    ).toEqual('R3');
   });
 });
