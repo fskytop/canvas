@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import TextInput from './components/TextInput';
 
 const mediumScreen = `@media (max-width: 830px)`;
-const smallScreen = `@media (max-width: 430px)`;
 
 const FilterRow = styled.div`
   padding: 30px;
