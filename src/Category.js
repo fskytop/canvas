@@ -26,59 +26,59 @@ class Category extends React.Component{
         <h4 className="text-mono mb-3 text-normal">Category</h4>
         <ul className="list-style-none mb-4">
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="AI">AI</a>
+               data="AI">AI</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="COVID-19">COVID-19</a>
+               data="COVID-19">COVID-19</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Tool">Tool</a>
+               data="Tool">Tool</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Developer">Developer</a>
+               data="Developer">Developer</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Practice">Practice</a>
+               data="Practice">Practice</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Design">Design</a>
+               data="Design">Design</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="DevOps">DevOps</a>
+               data="DevOps">DevOps</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Security">Security</a>
+               data="Security">Security</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Language">Language</a>
+               data="Language">Language</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="System">System</a>
+               data="System">System</span>
           </li>
           <li>
-            <a className="muted-link filter-item py-2 mb-0"
+            <span className="muted-link filter-item py-2 mb-0"
                onClick={this.handleClick}
-               data="Framework">Framework</a>
+               data="Framework">Framework</span>
           </li>
           
         </ul>
