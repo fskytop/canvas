@@ -3,10 +3,10 @@ import { shallow } from 'enzyme';
 import RestaurantList from '../RestaurantList';
 
 const restaurants = [
-  { title: 'R1', name: 'R1', description: 'batman', priceRange: '$' },
-  { title: 'R2', name: 'R2', description: 'wonder woman', priceRange: '$$' },
-  { title: 'R3', name: 'R3', description: 'superman', priceRange: '$$$' },
-  { title: 'R4', name: 'R4', description: 'aquaman', priceRange: '$$$' },
+  { title: 'R1', name: 'R1', tags: 'R1', description: 'batman', priceRange: '$' },
+  { title: 'R2', name: 'R2', tags: 'R1', description: 'wonder woman', priceRange: '$$' },
+  { title: 'R3', name: 'R3', tags: 'R1', description: 'superman', priceRange: '$$$' },
+  { title: 'R4', name: 'R4', tags: 'R1', description: 'aquaman', priceRange: '$$$' },
 ].map((r, i) => ({ ...r, id: `${i}`, imageSrc: '', imageDescription: '' }));
 
 describe('RestaurantList', () => {
