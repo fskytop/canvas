@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Input = styled.input.attrs({ type: 'text' })`
-  height: 30px;
-  font-size: 20px;
-  margin-left: 5px;
+const Input = styled.input.attrs({ 
+  type: 'text',
+  placeholder: 'Search for comics',
+  className: 'form-control input-lg input-block'
+})`
+  padding-left: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const Label = styled.label`
-  font-size: 25px;
-  margin-left: 10px;
+  width: 100%;
 `;
 
 const TextInput = ({ label, value, onChange, ...props }) => (
