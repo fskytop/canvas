@@ -20,7 +20,7 @@ const RestaurantList = ({ restaurants, priceRangeFilter, nameFilter }) => {
   const filteredRestaurants = restaurantsInPriceRange.filter(
     (restaurant) =>
       restaurant.title.toLowerCase().includes(nameFilter.toLowerCase()) ||
-      restaurant.title.toLowerCase().includes(nameFilter.toLowerCase()),
+      restaurant.tags.toLowerCase().includes(nameFilter.toLowerCase()),
   );
 
   return (

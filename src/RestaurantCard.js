@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
 const Card = styled.div`
   display: inline-block;
   width: 100%;
-  max-width: 550px;
+  max-width: 400px;
   margin: 0 5px;
 `;
 
@@ -41,13 +41,13 @@ const Description = styled.p`
 
 const RestaurantCard = ({ restaurant }) => (
   <Card>
-    <StyledLink to={`/restaurant/${restaurant.id}`}>
+    <StyledLink>
       <CardTitleRow>
         <CardTitle>{restaurant.title}</CardTitle>
         <PriceRange>{restaurant.priceRange}</PriceRange>
       </CardTitleRow>
       <Img src={restaurant.imageSrc} alt={restaurant.imageDescription} />
-      <Description>{restaurant.title}</Description>
+      <Description>{restaurant.tags}</Description>
     </StyledLink>
   </Card>
 );

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const Input = styled.input.attrs({ 
   type: 'text',
   placeholder: 'Search for comics',
-  className: 'form-control input-lg input-block'
+  className: 'form-control input-lg input-block',
+  id: "search-box"
 })`
   padding-left: 40px;
   padding-top: 12px;

@@ -27,6 +27,7 @@ const FilterRow = styled.div.attrs({
   className: 'col-lg-9 position-relative mb-3 box-shadow-extra-large'
 })`
   display: flex;
+  margin-top: 20px;
 
   ${mediumScreen} {
     flex-direction: column;

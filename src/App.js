@@ -5,8 +5,11 @@ import styled from 'styled-components';
 import Loading from './Loading';
 import Filters from './Filters';
 import RestaurantList from './RestaurantList';
+import Category from './Category';
 
-const MainColumn = styled.div`
+const MainColumn = styled.div.attrs({
+  className: 'col-lg-9'
+})`
   max-width: 1150px;
   margin: 0 auto;
 `;
@@ -89,6 +92,7 @@ class App extends React.Component {
     return (
       <Router history={this.props.history || defaultHistory}>
         <MainColumn>
+          <Category setNameFilter={this.setNameFilter}/>
           <Filters
             name={nameFilter}
             priceRange={priceRangeFilter}
