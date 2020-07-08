@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Actions from './Actions';
 
 const StyledLink = styled(Link)`
   color: inherit;
@@ -11,7 +12,7 @@ const StyledLink = styled(Link)`
 const Card = styled.div`
   display: inline-block;
   width: 100%;
-  max-width: 400px;
+  max-width: 430px;
   margin: 0 5px;
 `;
 
@@ -44,7 +45,10 @@ const RestaurantCard = ({ restaurant }) => (
     <StyledLink>
       <CardTitleRow>
         <CardTitle>{restaurant.title}</CardTitle>
-        <PriceRange>{restaurant.priceRange}</PriceRange>
+        <PriceRange></PriceRange>
+      </CardTitleRow>
+      <CardTitleRow>
+        <Actions sourceUrl={restaurant.imageSrc}/>
       </CardTitleRow>
       <Img src={restaurant.imageSrc} alt={restaurant.imageDescription} />
       <Description>{restaurant.tags}</Description>
