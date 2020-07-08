@@ -4,15 +4,16 @@ class Actions extends React.Component{
 
   constructor(props) {
     super(props);
-    
-    const path = 'https://resource.fsky.top/sky/1@500/';
-    
-    this.state = {
-      url: props.sourceUrl,
-      name: props.sourceUrl.split('/').pop(),
-      imgUrl: path + props.sourceUrl.split('/').pop(),
-    };
     this.handleClick = this.handleClick.bind(this);
+  }
+  
+  getImageName(){
+    return this.props.sourceUrl.split('/').pop();
+  }
+  
+  getImageUrl(){
+    const path = 'https://resource.fsky.top/sky/1@500/';
+    return path + this.getImageName();
   }
 
   toDataURL(url) {
@@ -37,9 +38,10 @@ class Actions extends React.Component{
     
     const type = e.target.getAttribute('data-type');
     if (type === 'markdown'){
-      window.prompt("Copy to clipboard: Ctrl+C, Enter", `![${this.state.name}](${this.state.imgUrl})`);
+      window.prompt("Copy to clipboard: Ctrl+C, Enter", `![${this.getImageName()}](${this.getImageUrl()})`);
+    } else if (type === 'download') {
+      this.download(this.getImageUrl(), this.getImageName()).then(r => {});
     } else {
-      this.download(this.state.imgUrl, this.state.name).then(r => {});
     }
   }
   
@@ -68,9 +70,11 @@ class Actions extends React.Component{
 
         <li>
           <div className="d-flex js-social-form js-social-container">
-            <span type="submit" className="btn btn-sm btn-with-count js-toggler-target"
-                    aria-label="Unstar this repository" title="Star primer/octicons"
-                    data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+            <span type="submit" className="btn btn-sm btn-with-count js-toggler-target" 
+                  aria-label="Unstar this repository" title="Star primer/octicons"
+                  data-ga-click="Repository, click star button, action:files#disambiguate; text:Star"
+                  onClick={this.handleClick}
+                  data-type="download">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>
             </span>
             <span className="social-count js-social-count"
@@ -81,8 +85,7 @@ class Actions extends React.Component{
             </span>
           </div>
         </li>
-
-
+        
       </ul>
     )
   }
