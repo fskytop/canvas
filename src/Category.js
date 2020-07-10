@@ -27,56 +27,67 @@ class Category extends React.Component{
         <ul className="list-style-none mb-4">
           <li>
             <span className="muted-link filter-item py-2 mb-0"
-               onClick={this.handleClick}
-               data="AI">AI</span>
+                  data-ga-click="Category, text:AI" 
+                  onClick={this.handleClick} 
+                  data="AI">AI</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:COVID-19"
                onClick={this.handleClick}
                data="COVID-19">COVID-19</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Tool"
                onClick={this.handleClick}
                data="Tool">Tool</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Developer"
                onClick={this.handleClick}
                data="Developer">Developer</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Practice"
                onClick={this.handleClick}
                data="Practice">Practice</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Design"
                onClick={this.handleClick}
                data="Design">Design</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:DevOps"
                onClick={this.handleClick}
                data="DevOps">DevOps</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Security"
                onClick={this.handleClick}
                data="Security">Security</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Language"
                onClick={this.handleClick}
                data="Language">Language</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:System"
                onClick={this.handleClick}
                data="System">System</span>
           </li>
           <li>
             <span className="muted-link filter-item py-2 mb-0"
+                  data-ga-click="Category, text:Framework"
                onClick={this.handleClick}
                data="Framework">Framework</span>
           </li>
