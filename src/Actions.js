@@ -38,7 +38,7 @@ class Actions extends React.Component{
     
     const type = e.target.getAttribute('data-type');
     if (type === 'markdown'){
-      window.prompt("Copy to clipboard: Ctrl+C, Enter", `![${this.getImageName()}](${this.getImageUrl()})`);
+      window.prompt("Copy to clipboard: Ctrl+C, Enter", `![Support from fsky.top](${this.getImageUrl()})`);
     } else if (type === 'download') {
       this.download(this.getImageUrl(), this.getImageName()).then(r => {});
     } else {
